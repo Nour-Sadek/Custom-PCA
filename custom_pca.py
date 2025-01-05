@@ -21,10 +21,13 @@ class CustomPCAClass:
     _eigenvectors: np.ndarray
     _transformed_X: np.ndarray
 
-    def __init__(self, x: np.ndarray) -> None:
+    def __init__(self, x: np.ndarray, centered: bool = False) -> None:
         """Initialize a new CustomPCAClass with <X> as the matrix."""
         self._X = x
-        self._X_centered = self._center_data()
+        if not centered:
+            self._X_centered = self._center_data()
+        else:
+            self._X_centered = self._X
         self._covariance_matrix = self._compute_covariance_matrix()
         self._eigenvalues, self._eigenvectors = self._compute_eigenvalues_eigenvectors()
         self._transformed_X = self._perform_pca()
