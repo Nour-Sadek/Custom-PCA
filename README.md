@@ -21,8 +21,10 @@ Expected outputs:
 - The eigenvalues and covariance matrix from the custom PCA match Scikit-learn's PCA closely.
 - Visualizations:
   - On the random dataset, both PCA methods produce similar random scatter patterns.
+  ![Image](https://github.com/user-attachments/assets/166dbef0-5c51-4429-9dba-192f2c63fa99)
   - On the wine dataset, both PCA methods reveal clustering consistent with the three wine classes, 
     with slight differences in alignment due to eigenvector orientation.
+  ![Image](https://github.com/user-attachments/assets/0a839961-3843-4c86-9c39-6e3cfe565544)
 
 # Repository Structure
 
